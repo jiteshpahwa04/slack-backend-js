@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "npm run lint:fix && npx nodemon index.js",
+    "dev": "npm run lint:fix && npx nodemon src/index.js",
     "format": "npx prettier --write .",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint . --fix"
