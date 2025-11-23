@@ -13,3 +13,6 @@ export const JWT_EXPIRY = process.env.JWT_EXPIRY || '1d';
 
 export const SMTP_EMAIL = process.env.SMTP_EMAIL || 'your_email@example.com';
 export const SMTP_PASSWORD = process.env.SMTP_PASSWORD || 'your_email_password';
+
+export const REDIS_HOST = process.env.REDIS_HOST || 'localhost';
+export const REDIS_PORT = process.env.REDIS_PORT || 6379;

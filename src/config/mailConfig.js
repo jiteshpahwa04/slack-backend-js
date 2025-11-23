@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer';
+
 import { SMTP_EMAIL, SMTP_PASSWORD } from './serverConfig.js';
 
 export default nodemailer.createTransport({
