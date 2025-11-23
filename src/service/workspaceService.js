@@ -1,9 +1,9 @@
 import {v4 as uuidv4} from "uuid";
 
-import workspaceRepository from "../repositories/workspaceRepository.js"
 import channelRepository from "../repositories/channelRepository.js";
-import ClientError from "../utils/errors/clientError.js";
 import userRepository from "../repositories/userRepository.js";
+import workspaceRepository from "../repositories/workspaceRepository.js"
+import ClientError from "../utils/errors/clientError.js";
 
 const isUserAdminOfWorkspace = (workspace, userId) => {
     return workspace.members.some((member) => 
@@ -11,7 +11,7 @@ const isUserAdminOfWorkspace = (workspace, userId) => {
     );
 }
 
-const isUserMemberOfWorkspace = (workspace, userId) => {
+export const isUserMemberOfWorkspace = (workspace, userId) => {
     return workspace.members.some((member) => 
         (member.memberId.toString() === userId || member.memberId._id.toString() === userId)
     );

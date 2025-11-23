@@ -6,6 +6,10 @@ const channelRepository = {
     deleteByWorkspaceId: async function (workspaceId) {
         const response = await Channel.deleteMany({ workspaceId: workspaceId });
         return response;
+    },
+    getChannelWithWorkspaceDetails: async function (channelId) {
+        const channel = await Channel.findById(channelId).populate('workspaceId');
+        return channel;
     }
 };
 

@@ -10,3 +10,6 @@ export const PROD_DB_URL = process.env.PROD_DB_URL || 'mongodb://localhost:27017
 
 export const JWT_SECRET = process.env.JWT_SECRET || 'your_jwt_secret';
 export const JWT_EXPIRY = process.env.JWT_EXPIRY || '1d';
+
+export const SMTP_EMAIL = process.env.SMTP_EMAIL || 'your_email@example.com';
+export const SMTP_PASSWORD = process.env.SMTP_PASSWORD || 'your_email_password';
