@@ -5,7 +5,7 @@ import { JWT_SECRET } from '../config/serverConfig.js';
 import userRepository from '../repositories/userRepository.js';
 import {
   customErrorResponse,
-  internalErrorResponse
+  internalServerErrorResponse
 } from '../utils/common/responseObjects.js';
 
 export const isAuthenticated = async (req, res, next) => {
@@ -49,6 +49,6 @@ export const isAuthenticated = async (req, res, next) => {
     }
     return res
       .status(StatusCodes.INTERNAL_SERVER_ERROR)
-      .json(internalErrorResponse(error));
+      .json(internalServerErrorResponse(error));
   }
 };
